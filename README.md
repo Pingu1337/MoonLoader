@@ -6,7 +6,7 @@ A terminal spinner/loader using the moon emoji 🌖
 
 > [NuGet](https://www.nuget.org/packages/H3rm.MoonLoader/)
 >```bash
->dotnet add package H3rm.MoonLoader --version 1.0.1
+>dotnet add package H3rm.MoonLoader
 >```
 
 ### Usage
