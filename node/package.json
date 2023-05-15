@@ -1,0 +1,18 @@
+{
+  "name": "moon-spinner",
+  "version": "1.0.3",
+  "description": "A terminal spinner/loader using the moon emoji 🌖",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CLI",
+    "loader",
+    "spinner"
+  ],
+  "author": "h3rm",
+  "license": "MIT"
+}
