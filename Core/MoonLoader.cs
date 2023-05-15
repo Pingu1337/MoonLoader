@@ -40,9 +40,10 @@ public class MoonLoader : IDisposable
     /// <summary>
     /// Displays the current moon symbol to the console.
     /// </summary>
-    public void Spin()
+    public void Spin(params object?[] args)
     {
-        Console.Write(Moon);
+        args = InsertMoon(args);
+        Console.Write($"\r{string.Join("", args)}");
     }
 
     private async Task<string> LoadAsync()
@@ -53,9 +54,27 @@ public class MoonLoader : IDisposable
 
     private string GetCurrentMoon()
     {
-        var output = $"\r{Moons[_moonIndex]}";
+        var output = Moons[_moonIndex];
         _moonIndex = (_moonIndex + 1) % Moons.Length;
         return output;
+    }
+
+    public object?[] InsertMoon(object?[] args)
+    {
+        if (ArgsContainMoon(args))
+        {
+            return args.Select(arg => (object?)arg
+                ?.ToString()
+                ?.Replace("{moon}", Moon)).ToArray();
+        }
+
+        return args.Append(Moon).ToArray();
+    }
+
+    private static bool ArgsContainMoon(params object?[] args)
+    {
+        var stringArgs = args.Select(arg => arg?.ToString()).ToArray();
+        return stringArgs.Any(arg => arg != null && arg.Contains("{moon}"));
     }
 
     /// <summary>

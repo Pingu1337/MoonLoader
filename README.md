@@ -28,6 +28,20 @@ while (i < 20)
 loader.Dispose();
 ```
 
+The `Spin()` method takes a `params object?[]`parameter that can be used to modify the output.
+
+```csharp
+loader.Spin("Hello Moon!");
+// Output: Hello Moon!🌖
+```
+Use the `{moon}` tag to place a moon somewhere.
+
+> ```csharp
+> loader.Spin("M{moon}{moon}N");
+> // Output: M🌖🌖N
+> ```
+> ![Moon](gh/assets/Screenshot1.png)
+
 The loader can also be retrieved as a string.
 ```csharp
 var loader = new MoonLoader();
@@ -41,7 +55,6 @@ while (i < 20)
 
 loader.Dispose();
 ```
-> *note that the moon will be placed at the start of the line and overwrite the first character.*
 
 #### IDisposable
 Make sure to call `loader.Dispose()` when it's not used anymore.
