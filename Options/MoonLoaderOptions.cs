@@ -22,6 +22,7 @@ public class MoonLoaderOptions
     public MoonLoaderOptions()
     {
         Delay = TimeSpan.FromMilliseconds(100);
+        HideCursor = true;
     }
 
     /// <summary>
