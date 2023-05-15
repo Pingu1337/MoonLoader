@@ -16,9 +16,9 @@ This will print a spinning 🌖 in the console.
 ```csharp
 using H3rm.MoonLoader.Core;
 
-var i = 0;
-
 var loader = new MoonLoader();
+
+int i = 0;
 while (i < 20)
 {
     loader.Spin();
@@ -30,9 +30,9 @@ loader.Dispose();
 
 The loader can also be retrieved as a string.
 ```csharp
-var loader = new MoonLoader(options);
+var loader = new MoonLoader();
 
-i = 0;
+int i = 0;
 while (i < 20)
 {
     Console.Write(loader.Moon);
