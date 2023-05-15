@@ -1,6 +1,6 @@
 {
   "name": "moon-spinner",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A terminal spinner/loader using the moon emoji 🌖",
   "main": "index.js",
   "type": "module",
