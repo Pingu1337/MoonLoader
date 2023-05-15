@@ -11,7 +11,7 @@ A terminal spinner/loader using the moon emoji 🌖
 
 ### Usage
 
-For basic usage, create a new instance of the loader and call `loader.Spin()` in a loop.
+For basic usage, create a new instance of the loader and call `loader.Spin()` in a loop.\
 This will print a spinning 🌖 in the console.
 ```csharp
 using H3rm.MoonLoader.Core;
